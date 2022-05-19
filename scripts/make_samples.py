@@ -3,11 +3,12 @@ import torch
 import numpy as np
 from omegaconf import OmegaConf
 from PIL import Image
-from main import instantiate_from_config, DataModuleFromConfig
 from torch.utils.data import DataLoader
 from torch.utils.data.dataloader import default_collate
 from tqdm import trange
 
+from taming.util import instantiate_from_config
+from main import DataModuleFromConfig
 
 def save_image(x, path):
     c,h,w = x.shape
